@@ -1,0 +1,19 @@
+{% extends 'mysite/main.html' %}
+
+
+{% block about %}
+{% if about_user %}
+<h2>About Me</h2>
+{% for user in about_user %}
+{% if user.user_description %}
+<p>{{ user.user_description }}</p>
+{% else %}
+<p><strong style="color: red;">Nothing to show.</strong></p>
+{% endif %}
+{% endfor %}
+{% endif %}
+<a href="{% url 'mysite:main_page' %}" class="_read_more">
+    <i class='bx bx-chevron-left'></i>
+    Back
+</a>
+{% endblock about %}

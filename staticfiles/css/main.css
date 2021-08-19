@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #ccc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+.navbar {
+    padding: 20px 100px;
+    transition: 0.4s;
+    background: #FFFFFF;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.navbar-brand ._lbl_my {
+    color: #18A558;
+}
+
+.navbar-brand .dot {
+    color: #ffa500;
+}
+
+.navbar-brand ._lbl_website {
+    color: #21B6A8;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid;
+    color: #18a558 !important;
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sticky {
+    background: #fff;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+._banner {
+    padding-bottom: 120px;
+
+}
+
+._banner_inner {
+    padding: 20px 30px 30px 30px;
+}
+
+._banner_content {
+    margin-top: 190px;
+    transition: 0.4s;
+}
+
+._banner_content ._upper_greet {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+._banner_name {
+    font-weight: 700;
+    color: #1C9B8E;
+    font-size: 40px;
+}
+
+._banner_left {
+    padding-top: 60px;
+}
+
+._owner_info {
+    margin-bottom: 28px;
+}
+
+._banner_left ._read_more {
+    color: #81B622;
+}
+
+._banner_left ._read_more i {
+    font-size: 20px;
+    position: relative;
+    top: 4px;
+}
+
+
+._banner-right ._img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    transition: 0.4s;
+    -webkit-box-shadow: 0 8px 17.5px -3px #d7d4d4;
+    -moz-box-shadow: 0 8px 17.5px -3px #d7d4d4;
+    box-shadow: 0 8px 17.5px -3px #d7d4d4;
+}
+
+._btn_instagram,
+._btn_github {
+    margin-right: 15px;
+}
+
+._btn_instagram,
+._btn_github {
+    padding: 7px 30px;
+    border-radius: 40px;
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+._btn_instagram i,
+._btn_github i {
+    font-size: 20px;
+    position: relative;
+    top: 3px;
+    right: 3px;
+}
+
+._btn_instagram {
+    background: #cc2b5e;
+    background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);
+    background: linear-gradient(to right, #753a88, #cc2b5e);
+    color: #e6e6e6;
+    transition: 0.4s;
+    border: none;
+}
+
+._btn_github {
+    border: none;
+    color: #e6e6e6;
+    background: #0F2027;
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+}
+
+._btn_instagram:hover,
+._btn_github:hover {
+    color: #FFFFFF;
+    -webkit-box-shadow: 0 8px 17.5px -3px #d7d4d4;
+    -moz-box-shadow: 0 8px 17.5px -3px #d7d4d4;
+    box-shadow: 0 8px 17.5px -3px #d7d4d4;
+    transition: 0.4s
+}
+
+._btn_instagram:focus,
+._btn_instagram:active,
+._btn_github:focus,
+._btn_github:active {
+    box-shadow: none !important;
+}
+
+._skills {
+    background: #FAFAFB;
+    padding: 50px 30px 50px 30px;
+}
+
+._heading h4 {
+    /* font-size: 40px; */
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #2B7C85;
+}
+
+._skills_content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+._btn_view_more_skills {
+    padding: 8px 20px;
+    background: #18a558;
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+
+._btn_view_more_skills:hover {
+    color: #FFFFFF;
+}
+
+.card {
+    width: 18rem;
+    border-radius: 20px;
+    border: none;
+    -webkit-box-shadow: 0px 7px 23px -4px rgba(66, 66, 66, 0.09);
+    box-shadow: 0px 7px 23px -4px rgba(66, 66, 66, 0.09);
+    margin: 20px 30px;
+    transition: 0.7s;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.card:hover {
+    transition: 0.7s;
+    -webkit-box-shadow: 0 6px 14px 3.5px #ddd;
+    -moz-box-shadow: 0 6px 14px 3.5px #ddd;
+    box-shadow: 0 6px 14px 3.5px #ddd;
+    /* border: none; */
+}
+
+.card-title {
+    font-size: 18px;
+    margin-top: 18px;
+    color: #1c9b8e;
+    font-weight: 600;
+    margin-bottom: -10px;
+}
+
+._card_icon_container {
+    font-size: 40px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+._card_icon_container img {
+    height: 35px;
+    margin: 10px;
+}
+
+.card-img-top {
+    border-top-left-radius: calc(1.2rem - 1px);
+    border-top-right-radius: calc(1.2rem - 1px);
+
+    /* filter: invert(1); FOR HOVER*/
+}
+
+._contact {
+    background: #262439;
+    padding: 50px 0px 50px 0px;
+}
+
+._contact_heading {
+    font-size: 40px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+._contact_left h5 {
+    color: #FFFFFF;
+}
+
+._contact_box ._icon {
+    margin-right: 10px;
+}
+
+._contact_box i {
+    color: #d8d2d2;
+    position: relative;
+    top: -3px;
+}
+
+._contact_text h6 {
+    color: #1c9b8e;
+    font-weight: 400;
+}
+
+._contact_text p {
+    color: #d8d2d2;
+}
+
+/* Comment/Message Form */
+
+._comment_input_fields {
+    background: #1C1E2A;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 16px;
+    transition: 0.5s;
+    color: #d8d2d2;
+}
+
+._comment_input_fields:active,
+._comment_input_fields:focus {
+    transition: 0.5s;
+    background: #164761;
+    box-shadow: none !important;
+    color: #d8d2d2;
+}
+
+._custom_textarea {
+    max-height: 130px;
+}
+
+._btn_send_message {
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: #164761;
+}
+
+._btn_send_message:hover {
+    color: #FFFFFF;
+}
+
+._btn_send_message:active,
+._btn_send_message:focus {
+    box-shadow: none !important;
+}
+
+._alert_message {
+    border: none;
+    background: #21b6a8;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 3px 10px 15px 15px;
+}
+
+._alert_message i {
+    font-size: 28px;
+    position: relative;
+    top: 4px;
+}
+
+@media only screen and (max-width: 991px) {
+    ._banner_content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    ._social_link {
+        justify-content: center;
+        padding-right: 0px;
+    }
+
+    /* .navbar {
+        padding: 6px 30px;
+    } */
+
+    /*
+    .navbar-brand {
+        font-size: 20px;
+    } */
+
+    ._banner-right ._img {
+        width: 40%;
+        height: auto;
+        object-fit: cover;
+        transition: 0.4s;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+    .card {
+        width: 23rem;
+    }
+
+    .navbar {
+        padding: 6px 30px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .navbar-brand {
+        font-size: 24px;
+        transition: 0.4s;
+    }
+
+    ._banner_name {
+        font-size: 20px;
+    }
+
+    .navbar {
+        padding: 6px 30px;
+    }
+}
+
+@media only screen and (max-width: 441px) {
+    .navbar-brand {
+        font-size: 22px;
+        transition: 0.4s;
+    }
+
+    ._banner_inner {
+        padding: 0;
+    }
+
+    ._skills {
+        padding: 50px 0px 50px 0px;
+        transition: 0.3s;
+    }
+
+    .navbar {
+        padding: 6px 30px;
+    }
+}
+
+@media only screen and (max-width: 411px) {
+    ._banner_name {
+        font-size: 30px;
+    }
+
+    ._skills {
+        padding: 50px 0px 50px 0px;
+        transition: 0.3s;
+    }
+
+    .navbar {
+        padding: 6px 30px;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    ._banner_name {
+        font-size: 30px;
+    }
+
+    ._skills {
+        padding: 50px 0px 50px 0px;
+        transition: 0.3s;
+    }
+}
+
+@media only screen and (max-width: 449px) {
+    ._banner_name {
+        font-size: 10px;
+    }
+
+    .card {
+        width: 23rem;
+    }
+
+    ._skills {
+        padding: 50px 0px 50px 0px;
+        transition: 0.3s;
+    }
+}
+
+@media only screen and (max-width: 555px) {
+    ._banner_name {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 792px) {
+
+    ._banner_content {
+        margin-top: 120px;
+        transition: 0.4s;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    ._btn_instagram,
+    ._btn_github {
+        margin-right: 0;
+    }
+}
