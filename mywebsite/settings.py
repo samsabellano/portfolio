@@ -14,7 +14,6 @@ from pathlib import Path
 import os
 import django_heroku
 import dj_database_url
-from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -86,13 +85,15 @@ WSGI_APPLICATION = 'mywebsite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'mywebsite',
-        'USER':'postgres',
-        'PASSWORD':'sam851998',
-        'HOST':'localhost',
-        'PORT':'5432',
+        'NAME': 'mywebsite',
+        'USER': 'postgres',
+        'PASSWORD': 'sam851998',
+        'HOST': 'localhost',
+        'PORT': 5432,
     }
 }
+
+
 
 
 # Password validation
