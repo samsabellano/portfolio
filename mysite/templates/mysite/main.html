@@ -68,8 +68,6 @@
                                 <p>I'm a web developer and UI/UX designer.</p>
                             </div>
                             <div class="_social_link d-flex flex-wrap">
-
-                                {% comment %}
                                 <div class="pb-3">
                                     <a href="{{ user.user_instagram_link }}" class="btn _btn_instagram
                                         {% if not user.user_instagram_link %}disabled{% endif %}" target="_blank">
@@ -85,38 +83,20 @@
                                         Github
                                     </a>
                                 </div>
-                                {% endcomment %}
-
-                                <div class="pb-3">
-                                    <a href="https://www.instagram.com/sam.sabellano/" class="btn _btn_instagram"
-                                        target="_blank">
-                                        <i class='bx bxl-instagram-alt rounded-circle'></i>
-                                        Instagram
-                                    </a>
-                                </div>
-                                <div class="pb-3">
-                                    <a href="https://github.com/samsabellano" class="btn _btn_github float-left"
-                                        target="_blank">
-                                        <i class='bx bxl-github'></i>
-                                        Github
-                                    </a>
-                                </div>
                             </div>
                             <a href="{% url 'mysite:about_me' %}" class="_read_more">
                                 Read more about me
                                 <i class='bx bx-chevron-right'></i>
                             </a>
                             {% endfor %}
-                            {% endif %}
+                             {% endif %}
                             {% endblock about %}
 
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="_banner-right">
-                            <img src="{% static 'image/me.png' %}" alt="Profile picture" class="_img rounded-circle">
 
-                            {% comment %}
                             {% for user in about_user %}
                             <img src="
                             {% if user.user_image %}
@@ -126,7 +106,6 @@
                             {% endif %}
                             " alt="Profile picture" class="_img rounded-circle">
                             {% endfor %}
-                            {% endcomment %}
 
                         </div>
                     </div>
