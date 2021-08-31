@@ -24,20 +24,20 @@ def main_page(request):
     )
 
 
-def about_me(request):
-    form = CommentForm()
-    about_user = About.objects.filter()
+# def about_me(request):
+#     form = CommentForm()
+#     about_user = About.objects.filter()
 
-    if request.method == 'POST':
-        form = CommentForm(request.POST)
+#     if request.method == 'POST':
+#         form = CommentForm(request.POST)
 
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Thank you for sending a message!')
-            return redirect(request.path)
+#         if form.is_valid():
+#             form.save()
+#             messages.success(request, 'Thank you for sending a message!')
+#             return redirect(request.path)
 
-    return render(request, 'mysite/about.html', {
-            'form': form,
-            'about_user': about_user
-        }
-    )
+#     return render(request, 'mysite/about.html', {
+#             'form': form,
+#             'about_user': about_user
+#         }
+#     )
