@@ -86,12 +86,10 @@
                                 </div>
                             </div>
 
-                            {% comment %}
                             <a href="{% url 'mysite:about_me' %}" class="_read_more">
                                 Read more about me
                                 <i class='bx bx-chevron-right'></i>
                             </a>
-                            {% endcomment %}
 
                             {% endfor %}
                             {% endif %}
@@ -106,15 +104,14 @@
                             </div>
                             <div class="_social_link d-flex flex-wrap">
                                 <div class="pb-3">
-                                    <a href="https://www.instagram.com/sam.sabellano/" class="btn _btn_instagram
-                                        {% if not user.user_instagram_link %}disabled{% endif %}" target="_blank">
+                                    <a href="https://www.instagram.com/sam.sabellano/" class="btn _btn_instagram"
+                                        target="_blank">
                                         <i class='bx bxl-instagram-alt rounded-circle'></i>
                                         Instagram
                                     </a>
                                 </div>
                                 <div class="pb-3">
-                                    <a href="https://github.com/samsabellano"
-                                        class="btn _btn_github float-left {% if not user.user_github_link %}disabled{% endif %}"
+                                    <a href="https://github.com/samsabellano" class="btn _btn_github float-left"
                                         target="_blank">
                                         <i class='bx bxl-github'></i>
                                         Github
