@@ -7,7 +7,7 @@ from .models import (About)
 
 def main_page(request):
     form = CommentForm()
-    about_user = About.objects.filter()
+    about_user = About.objects.all()
 
     if request.method == 'POST':
         form = CommentForm(request.POST)
