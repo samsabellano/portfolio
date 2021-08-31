@@ -7,7 +7,6 @@ from .models import (About)
 
 def main_page(request):
     form = CommentForm()
-    user_obj = User.objects.all()
     about_user = About.objects.all()
 
     if request.method == 'POST':
@@ -20,7 +19,6 @@ def main_page(request):
 
     return render(request, 'mysite/main.html', {
             'form': form,
-            'user_obj': user_obj,
             'about_user': about_user,
         }
     )

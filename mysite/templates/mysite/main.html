@@ -65,23 +65,7 @@
                                 <h2 class="_banner_name">{{ user.user_first_name }} {{ user.user_last_name }}</h2>
                                 <p>I'm a web developer and UI/UX designer.</p>
                             </div>
-                            <div class="_social_link d-flex flex-wrap">
-                                <div class="pb-3">
-                                    <a href="{{ user.user_instagram_link }}" class="btn _btn_instagram
-                                        {% if not user.user_instagram_link %}disabled{% endif %}" target="_blank">
-                                        <i class='bx bxl-instagram-alt rounded-circle'></i>
-                                        Instagram
-                                    </a>
-                                </div>
-                                <div class="pb-3">
-                                    <a href="{{ user.user_github_link }}"
-                                        class="btn _btn_github float-left {% if not user.user_github_link %}disabled{% endif %}"
-                                        target="_blank">
-                                        <i class='bx bxl-github'></i>
-                                        Github
-                                    </a>
-                                </div>
-                            </div>
+                            
                             <a href="{% url 'mysite:about_me' %}" class="_read_more">
                                 Read more about me
                                 <i class='bx bx-chevron-right'></i>
