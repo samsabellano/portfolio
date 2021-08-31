@@ -39,7 +39,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if url_name == 'about_me' %}active{% endif %}"
-                            href="{% url 'mysite:main_page' %}">About Me</a>
+                            href="{% url 'mysite:about_me' %}">About Me</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#skills">Skills</a>
@@ -59,7 +59,6 @@
                     <div class="col-lg-8">
                         <div class="_banner_left">
 
-                            {% comment %}
                             {% block about %}
                             {% if about_user %}
                             {% for user in about_user %}
@@ -94,38 +93,12 @@
                             {% endfor %}
                             {% endif %}
                             {% endblock about %}
-                            {% endcomment %}
-
-
-                            <div class="_owner_info">
-                                <small class="_upper_greet">Hello, my name is</small>
-                                <h2 class="_banner_name">Samuel Sabellano</h2>
-                                <p>I'm a web developer and UI/UX designer.</p>
-                            </div>
-                            <div class="_social_link d-flex flex-wrap">
-                                <div class="pb-3">
-                                    <a href="https://www.instagram.com/sam.sabellano/" class="btn _btn_instagram"
-                                        target="_blank">
-                                        <i class='bx bxl-instagram-alt rounded-circle'></i>
-                                        Instagram
-                                    </a>
-                                </div>
-                                <div class="pb-3">
-                                    <a href="https://github.com/samsabellano" class="btn _btn_github float-left"
-                                        target="_blank">
-                                        <i class='bx bxl-github'></i>
-                                        Github
-                                    </a>
-                                </div>
-                            </div>
 
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="_banner-right">
-                            <img src="{% static 'image/me.png' %}" alt="Profile picture" class="_img rounded-circle">
 
-                            {% comment %}
                             {% for user in about_user %}
                             <img src="
                             {% if user.user_image %}
@@ -135,7 +108,6 @@
                             {% endif %}
                             " alt="Profile picture" class="_img rounded-circle">
                             {% endfor %}
-                            {% endcomment %}
 
                         </div>
                     </div>
@@ -211,7 +183,6 @@
                     <div class="_contact_left">
                         <h5 class="mb-4" style="color: #18a558;">Contact info</h5>
 
-                        {% comment %}
                         {% if about_user %}
                         {% for user in about_user %}
                         <div class="_contact_box">
@@ -254,43 +225,6 @@
                             <h6>Contact info is currently unavailable.</h6>
                         </div>
                         {% endif %}
-                        {% endcomment %}
-
-                        <div class="_contact_box">
-                            <div class="d-flex">
-                                <div class="_icon">
-                                    <i class='bx bxs-map'></i>
-                                </div>
-                                <div class="_contact_text">
-                                    <h6>Address</h6>
-                                    <p>
-                                        492 South St. DBP Village, Ma-a, Davao City
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="_contact_box">
-                            <div class="d-flex">
-                                <div class="_icon">
-                                    <i class='bx bxs-phone'></i>
-                                </div>
-                                <div class="_contact_text">
-                                    <h6>Contact #</h6>
-                                    <p>09557095574</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="_contact_box">
-                            <div class="d-flex">
-                                <div class="_icon">
-                                    <i class='bx bxs-envelope'></i>
-                                </div>
-                                <div class="_contact_text">
-                                    <h6>Email</h6>
-                                    <p>ssabellano851998@gmail.com</p>
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
                 </div>
