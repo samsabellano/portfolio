@@ -68,7 +68,9 @@
                                 <p>I'm a web developer and UI/UX designer.</p>
                             </div>
                             <div class="_social_link d-flex flex-wrap">
-                                <!-- <div class="pb-3">
+
+                                {% comment %}
+                                <div class="pb-3">
                                     <a href="{{ user.user_instagram_link }}" class="btn _btn_instagram
                                         {% if not user.user_instagram_link %}disabled{% endif %}" target="_blank">
                                         <i class='bx bxl-instagram-alt rounded-circle'></i>
@@ -82,7 +84,9 @@
                                         <i class='bx bxl-github'></i>
                                         Github
                                     </a>
-                                </div> -->
+                                </div>
+                                {% endcomment %}
+
                                 <div class="pb-3">
                                     <a href="https://www.instagram.com/sam.sabellano/" class="btn _btn_instagram"
                                         target="_blank">
@@ -110,8 +114,9 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="_banner-right">
-                            <!-- <img src="{% static 'image/me.png' %}" alt="Profile picture" class="_img rounded-circle"> -->
+                            <img src="{% static 'image/me.png' %}" alt="Profile picture" class="_img rounded-circle">
 
+                            {% comment %}
                             {% for user in about_user %}
                             <img src="
                             {% if user.user_image %}
@@ -121,6 +126,7 @@
                             {% endif %}
                             " alt="Profile picture" class="_img rounded-circle">
                             {% endfor %}
+                            {% endcomment %}
 
                         </div>
                     </div>
