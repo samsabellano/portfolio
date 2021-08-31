@@ -55,11 +55,13 @@
     <div class="_banner w-100" id="aboutme">
         <div class="container">
             <div class="_banner_inner">
-                {% for user in about_user %}
+
                 <div class="_banner_content d-flex flex-wrap">
                     <div class="col-lg-8">
                         <div class="_banner_left">
+
                             {% block about %}
+                            {% for user in about_user %}
                             <div class="_owner_info">
                                 <small class="_upper_greet">Hello, my name is</small>
                                 <h2 class="_banner_name">{{ user.user_first_name }} {{ user.user_last_name }}</h2>
@@ -86,12 +88,15 @@
                                 Read more about me
                                 <i class='bx bx-chevron-right'></i>
                             </a>
+                            {% endfor %}
                             {% endblock about %}
 
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="_banner-right">
+
+                            {% for user in about_user %}
                             <img src="
                             {% if user.user_image %}
                             {{ user.user_image.url }}
@@ -99,10 +104,12 @@
                             {% static 'image/me.png' %}
                             {% endif %}
                             " alt="Profile picture" class="_img rounded-circle">
+                            {% endfor %}
+
                         </div>
                     </div>
                 </div>
-                {% endfor %}
+
             </div>
         </div>
     </div>
