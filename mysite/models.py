@@ -17,7 +17,7 @@ class About(models.Model):
         verbose_name_plural = 'About'
 
     def __str__(self):
-        return f'{self.user_first_name} - {self.user_description}'
+        return f'{self.user_first_name} - {self.user_last_name}'
 
 
 class Comment(models.Model):
@@ -26,4 +26,4 @@ class Comment(models.Model):
     comment_description = models.TextField(null=False, blank=False)
 
     def __str__(self):
-        return self.comment_fullname
+        return f'{self.comment_fullname} - {self.comment_email}'

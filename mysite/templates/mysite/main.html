@@ -92,13 +92,13 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="_banner-right">
-
+                            <img src="
                             {% if user.user_image %}
-                            <img src="{{ user.user_image.url }}" alt="" class="_img rounded-circle">
+                            {{ user.user_image.url }}
                             {% else %}
-                            <img src="{% static 'image/me.png' %}" alt="" class="_img rounded-circle">
+                            {% static 'image/me.png' %}
                             {% endif %}
-
+                            " alt="Profile picture" class="_img rounded-circle">
                         </div>
                     </div>
                 </div>
