@@ -84,10 +84,14 @@
                                     </a>
                                 </div>
                             </div>
+
+                            {% comment %}
                             <a href="{% url 'mysite:about_me' %}" class="_read_more">
                                 Read more about me
                                 <i class='bx bx-chevron-right'></i>
                             </a>
+                            {% endcomment %}
+
                             {% endfor %}
                             {% endif %}
                             {% endblock about %}
