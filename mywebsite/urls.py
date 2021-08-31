@@ -7,7 +7,7 @@ from .views import redirect_main_page
 urlpatterns = [
     path('', redirect_main_page),
     path('admin/', admin.site.urls),
-    path('home/', include('mysite.urls', namespace='mysite'))
+    path('', include('mysite.urls', namespace='mysite'))
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
