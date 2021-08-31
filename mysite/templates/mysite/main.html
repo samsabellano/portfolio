@@ -173,6 +173,8 @@
                 <div class="col-md-6 mb-4">
                     <div class="_contact_left">
                         <h5 class="mb-4" style="color: #18a558;">Contact info</h5>
+
+                        {% if about_user %}
                         {% for user in about_user %}
                         <div class="_contact_box">
                             <div class="d-flex">
@@ -209,6 +211,13 @@
                             </div>
                         </div>
                         {% endfor %}
+                        {% else %}
+                        <div class="_contact_text">
+                            <h6>Contact info is currently not available.</h6>
+                        </div>
+                        {% endif %}
+
+
                     </div>
 
                 </div>
