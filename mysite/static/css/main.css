@@ -467,6 +467,11 @@ nav {
         padding: 50px 0px 50px 0px;
         transition: 0.3s;
     }
+
+    ._btn_send_message {
+        display: block;
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 555px) {
