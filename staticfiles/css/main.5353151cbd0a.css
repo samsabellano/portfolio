@@ -180,8 +180,7 @@ nav {
     -webkit-box-shadow: 0 8px 17.5px -3px #d7d4d4;
     -moz-box-shadow: 0 8px 17.5px -3px #d7d4d4;
     box-shadow: 0 8px 17.5px -3px #d7d4d4;
-    transition: 0.4s;
-    transform: scale(1)
+    transition: 0.4s
 }
 
 ._btn_instagram:focus,

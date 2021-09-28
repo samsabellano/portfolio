@@ -180,8 +180,7 @@ nav {
     -webkit-box-shadow: 0 8px 17.5px -3px #d7d4d4;
     -moz-box-shadow: 0 8px 17.5px -3px #d7d4d4;
     box-shadow: 0 8px 17.5px -3px #d7d4d4;
-    transition: 0.4s;
-    transform: scale(1)
+    transition: 0.4s
 }
 
 ._btn_instagram:focus,
@@ -238,8 +237,9 @@ nav {
     transform: scale(1.1);
     transition: all 350ms;
     /* transition: 0.7s; */
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-        rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    -webkit-box-shadow: 0 6px 14px 3.5px #ddd;
+    -moz-box-shadow: 0 6px 14px 3.5px #ddd;
+    box-shadow: 0 6px 14px 3.5px #ddd;
     /* border: none; */
 }
 
