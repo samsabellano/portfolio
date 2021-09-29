@@ -324,6 +324,7 @@ nav {
 
 ._custom_textarea {
     max-height: 130px;
+    min-height: 51px;
 }
 
 ._btn_send_message {
