@@ -9,7 +9,7 @@ class About(models.Model):
     user_contact_number = models.CharField(max_length=11, null=False, blank=False)
     user_address = models.CharField(max_length=255, null=False, blank=False)
     user_email = models.EmailField(max_length=255, null=False, blank=False)
-    user_image = models.ImageField(blank=True, null=True, upload_to='about/images')
+    user_image = models.ImageField(blank=True, null=True, upload_to='about/images/')
     user_instagram_link = models.URLField(null=True, blank=True, default='https://www.instagram.com/sam.sabellano/')
     user_github_link = models.URLField(null=True, blank=True, default='https://github.com/samsabellano')
 
