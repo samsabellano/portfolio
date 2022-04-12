@@ -97,17 +97,13 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="_banner-right">
-
                             {% for user in about_user %}
-                            <img src="
                             {% if user.user_image %}
-                            {{ user.user_image.url }}
+                            <img src="{{ user.user_image.url }}" alt="Profile picture" class="_img rounded-circle">
                             {% else %}
-                            {% static 'image/me.png' %}
+                            <img src="{% static 'image/me.png' %}" alt="Profile picture" class="_img rounded-circle">
                             {% endif %}
-                            " alt="Profile picture" class="_img rounded-circle">
                             {% endfor %}
-
                         </div>
                     </div>
                 </div>
