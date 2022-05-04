@@ -42,7 +42,8 @@
                             href="{% url 'mysite:about_me' %}">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link {% if request.path == '/about/#skills' %}active{% endif %}"
+                            href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact Me</a>
@@ -58,27 +59,26 @@
                 <div class="_banner_content d-flex flex-wrap">
                     <div class="col-lg-8">
                         <div class="_banner_left">
-
                             {% block about %}
                             {% if about_user %}
-                            {% for user in about_user %}
                             <div class="_owner_info">
                                 <small class="_upper_greet">Hello, my name is</small>
-                                <h2 class="_banner_name">{{ user.user_first_name }} {{ user.user_last_name }}</h2>
+                                <h2 class="_banner_name">{{ about_user.user_first_name }}
+                                    {{ about_user.user_last_name }}</h2>
                                 <p>I'm a web developer and UI/UX designer.</p>
                             </div>
                             <div class="_social_link d-flex flex-wrap">
                                 <div class="pb-3">
-                                    <a href="{{ user.user_instagram_link }}" class="btn _btn_instagram
-                                        {% if not user.user_instagram_link %}disabled{% endif %}" target="_blank">
+                                    <a href="{{ about_user.user_instagram_link }}" class="btn _btn_instagram
+                                        {% if not about_user.user_instagram_link %}disabled{% endif %}"
+                                        target="_blank">
                                         <i class='bx bxl-instagram-alt rounded-circle'></i>
                                         Instagram
                                     </a>
                                 </div>
                                 <div class="pb-3">
-                                    <a href="{{ user.user_github_link }}"
-                                        class="btn _btn_github float-left {% if not user.user_github_link %}disabled{% endif %}"
-                                        target="_blank">
+                                    <a href="{{ about_user.user_github_link }}" class="btn _btn_github float-left
+                                        {% if not about_user.user_github_link %}disabled{% endif %}" target="_blank">
                                         <i class='bx bxl-github'></i>
                                         Github
                                     </a>
@@ -89,7 +89,6 @@
                                 Read more
                                 <i class='bx bx-chevron-right'></i>
                             </a>
-                            {% endfor %}
                             {% endif %}
                             {% endblock about %}
 
@@ -97,13 +96,12 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="_banner-right">
-                            {% for user in about_user %}
-                            {% if user.user_image %}
-                            <img src="{{ user.user_image.url }}" alt="Profile picture" class="_img rounded-circle">
+                            {% if about_user.user_image %}
+                            <img src="{{ about_user.user_image.url }}" alt="Profile picture"
+                                class="_img rounded-circle">
                             {% else %}
                             <img src="{% static 'image/me.png' %}" alt="Profile picture" class="_img rounded-circle">
                             {% endif %}
-                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -179,7 +177,6 @@
                         <h5 class="mb-4" style="color: #18a558;">Contact info</h5>
 
                         {% if about_user %}
-                        {% for user in about_user %}
                         <div class="_contact_box">
                             <div class="d-flex">
                                 <div class="_icon">
@@ -187,7 +184,7 @@
                                 </div>
                                 <div class="_contact_text">
                                     <h6>Address</h6>
-                                    <p>{{ user.user_address }}</p>
+                                    <p>{{ about_user.user_address }}</p>
                                 </div>
                             </div>
                         </div>
@@ -198,7 +195,7 @@
                                 </div>
                                 <div class="_contact_text">
                                     <h6>Contact #</h6>
-                                    <p>{{ user.user_contact_number }}</p>
+                                    <p>{{ about_user.user_contact_number }}</p>
                                 </div>
                             </div>
                         </div>
@@ -209,11 +206,10 @@
                                 </div>
                                 <div class="_contact_text">
                                     <h6>Email</h6>
-                                    <p>{{ user.user_email }}</p>
+                                    <p>{{ about_user.user_email }}</p>
                                 </div>
                             </div>
                         </div>
-                        {% endfor %}
                         {% else %}
                         <div class="_contact_text">
                             <h6>Contact info is currently unavailable.</h6>
