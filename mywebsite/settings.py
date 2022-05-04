@@ -89,11 +89,14 @@ WSGI_APPLICATION = 'mywebsite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'portfolio',
-        'USER': 'samsabellano',
+        'NAME': 'samsfgpq_portfolio',
+        'USER': 'samsfgpq_samsabellano',
         'PASSWORD': 'samsabellanoadmin',
         'HOST': 'localhost',
         'PORT': '3307',
+        'OPTIONS': {
+          'autocommit': True,
+        },
     }
 }
 
