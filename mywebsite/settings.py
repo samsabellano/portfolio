@@ -24,9 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-yls%*ftfttzxluqm^t(!@52ten_7_c9lar=ar79n6uezzlw#u2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'www.samsabellano.com'
+]
 
 
 # Application definition
@@ -85,12 +88,12 @@ WSGI_APPLICATION = 'mywebsite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd6sihvvllfj1va',
-        'USER': 'mzzmhpdeeaxigr',
-        'PASSWORD': '4dd0f9f3a45376f026a85b503eb928b7e561b2ef45b83cb211630c11a7277928',
-        'HOST': 'ec2-44-198-24-0.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'portfolio',
+        'USER': 'samsabellano',
+        'PASSWORD': 'admin',
+        'HOST': 'localhost',
+        'PORT': '3307',
     }
 }
 
@@ -135,9 +138,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static')
+# ]
 
 
 # Default primary key field type
