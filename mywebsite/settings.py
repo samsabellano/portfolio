@@ -29,7 +29,7 @@ DEBUG = config('DEBUG', cast=bool, default=False)
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'www.samsabellano.com'
+    'samsabellano.pythonanywhere.com'
 ]
 
 
@@ -137,10 +137,11 @@ SESSION_COOKIE_SECURE = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'static')
